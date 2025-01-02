@@ -10,7 +10,7 @@ const useInfiniteScroll = (loadMore, hasMore, threshold = 100) => {
 
     // Trigger loadMore when the user is close to the bottom of the page
     if (scrollHeight - scrollTop - clientHeight < threshold) {
-      setIsFetching(true); // Mark as fetching
+      setIsFetching(true);
     }
   };
 
@@ -20,12 +20,12 @@ const useInfiniteScroll = (loadMore, hasMore, threshold = 100) => {
 
     // Clean up the scroll listener
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isFetching, hasMore]); // Only re-attach event listener if isFetching or hasMore changes
+  }, [isFetching, hasMore]);
 
   // Call the loadMore function when scroll reaches the bottom
   useEffect(() => {
     if (isFetching) {
-      loadMore(); // Trigger the API call to load more products
+      loadMore();
     }
   }, [isFetching, loadMore]);
 

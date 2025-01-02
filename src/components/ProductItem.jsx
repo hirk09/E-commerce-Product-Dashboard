@@ -16,13 +16,6 @@ const ProductItem = ({ product, onClick }) => {
         width={400}
         height={400}
       />
-      
-      {/* Best Seller Badge (Conditionally Rendered) */}
-      {product.isBestSeller && (
-        <span className="absolute top-4 left-4 bg-indigo-600 text-white text-xs font-semibold py-1 px-2 rounded-full">
-          Best Seller
-        </span>
-      )}
 
       {/* Product Title */}
       <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 hover:text-indigo-600 transition-colors duration-300">
@@ -37,7 +30,7 @@ const ProductItem = ({ product, onClick }) => {
         ${product.price}
       </p>
 
-      {/* CTA Button */}
+      {/* Button */}
       <button className="w-full py-2 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out">
         View Details
       </button>

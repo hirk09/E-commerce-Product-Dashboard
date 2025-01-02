@@ -76,16 +76,6 @@ const ProductModal = ({ productId, onClose }) => {
             <p className="text-lg text-gray-500 mt-2">
               Available: {productDetails.available ? 'In Stock' : 'Out of Stock'}
             </p>
-
-            {/* Call-to-Action Button */}
-            <div className="mt-6">
-              <button
-                className="w-full sm:w-auto py-3 px-6 bg-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300"
-                onClick={() => alert('Product added to cart!')} // Simulate adding to cart
-              >
-                Add to Cart
-              </button>
-            </div>
           </div>
         </div>
       </div>
